@@ -24,4 +24,10 @@ class HelloWorldTest {
 		assertEquals("Hi Universe!", subject.getMessage(true));
 	}
 
+	@Test
+	void testGetMessageNull() {
+		assertEquals("Hi World!", subject.getMessage(null));
+	}
+
+
 }
