@@ -30,6 +30,7 @@ class HelloWorldTest {
                 try{
 			assertEquals("Hi World!", subject.getMessage(null));
 			passed = true;
+		}
 		catch(groovy.lang.MissingMethodException e){
 			passed = false;
 		}
