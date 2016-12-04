@@ -26,7 +26,14 @@ class HelloWorldTest {
 
 	@Test
 	void testGetMessageNull() {
-		assertEquals("Hi World!", subject.getMessage(null));
+		boolean passed = false;
+                try{
+			assertEquals("Hi World!", subject.getMessage(null));
+			passed = true;
+		catch(groovy.lang.MissingMethodException e){
+			passed = false;
+		}
+		assert passed : "expected at least one argument";
 	}
 
 
