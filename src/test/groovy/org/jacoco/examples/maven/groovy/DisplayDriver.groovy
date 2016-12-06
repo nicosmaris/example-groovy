@@ -15,7 +15,13 @@ class DisplayDriver {
         browser_with_debug_level = new FirefoxDriver(ffox, new FirefoxProfile());
     }
     void close(){
+        /**
+         * It is mandatory to close it when you are done
+         */
         browser_with_debug_level.close();
         browser_with_debug_level.quit();
+    }
+    void open(String page){
+        browser_with_debug_level.get(page);
     }
 }

@@ -3,6 +3,7 @@ sudo: required
 
 before_install:
   - unzip ui/firefox-45.5.1-esr.zip -d ui
+  - sudo pip install bzt
 
 addons:
   apt:
@@ -12,10 +13,10 @@ addons:
 install:
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-  - bzt performance.yml
 
 script:
 #  - mvn test
+  - bzt performance.yml
 
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
