@@ -2,7 +2,7 @@ language: groovy
 
 before_install:
   - unzip ui/firefox-45.5.1-esr.zip -d ui
-  - pip install bzt
+  - sudo pip install bzt
 
 addons:
   apt:
