@@ -21,12 +21,7 @@
   <url>http://www.eclemma.org/jacoco</url>
 
     <properties>
-        <source.property>1.8</source.property>
-        <target.property>1.8</target.property>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gatling.version>${project.version}</gatling.version>
-        <gatling-plugin.version>2.2.1</gatling-plugin.version>
-        <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
+        <gatling.version>2.2.0-M2</gatling.version>
     </properties>
 
   <dependencies>
@@ -51,7 +46,11 @@
           <artifactId>selenium-firefox-driver</artifactId>
           <version>2.53.1</version>
       </dependency>
-
+      <dependency>
+          <groupId>io.gatling.highcharts</groupId>
+          <artifactId>gatling-charts-highcharts</artifactId>
+          <version>${gatling.version}</version>
+      </dependency>
   </dependencies>
 
   <build>
@@ -94,6 +93,26 @@
           </execution>
         </executions>
       </plugin>
+        <plugin>
+            <groupId>net.alchim31.maven</groupId>
+            <artifactId>scala-maven-plugin</artifactId>
+            <version>3.2.2</version>
+        </plugin>
+        <plugin>
+            <groupId>io.gatling</groupId>
+            <artifactId>gatling-maven-plugin</artifactId>
+            <version>${gatling.version}</version>
+            <configuration>
+                <jvmArgs>
+                    <jvmArg>-Durl=http://localhost:9000</jvmArg>
+                    <jvmArg>-DnumberOfUsers=10</jvmArg>
+                    <jvmArg>-DnumberOfRepetitions=-1</jvmArg>
+                    <jvmArg>-DdurationMinutes=1</jvmArg>
+                    <jvmArg>-DpauseBetweenRequestsMs=3000</jvmArg>
+                    <jvmArg>-Ddebug=false</jvmArg>
+                </jvmArgs>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
 

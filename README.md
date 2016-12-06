@@ -1,5 +1,4 @@
-[![Travis build status](https://travis-ci.org/nicosmaris/example-groovy.png?branch=master)](https://travis-ci.org/nicosmaris/example-groovy) [![codecov.io](http://codecov.io/github/nicosmaris/example-groovy/coverage.svg?branch=master)](https://codecov.io/gh/nicosmaris/example-groovy/branch/master) 
-
+[![Travis build status](https://travis-ci.org/nicosmaris/example-groovy.png?branch=master)](https://travis-ci.org/nicosmaris/example-groovy) 
 Groovy project with selenium tests. The only supported browser for the moment is Firefox 45.
 
 

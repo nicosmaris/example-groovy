@@ -7,7 +7,7 @@ import static org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 
-class HelloWorldTest {
+class SearchTest {
 	private driver;
 	@Before
 	void setup() {
