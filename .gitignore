@@ -2,3 +2,6 @@
 *.iml
 target
 ui/firefox/*
+2016*
+
+performance.xml

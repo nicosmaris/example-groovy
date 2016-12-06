@@ -1,0 +1,31 @@
+---
+execution:
+- concurrency: 10
+  ramp-up: 1s
+  hold-for: 1s
+  scenario: simple
+
+scenarios:
+  simple:
+    think-time: 0.75
+    requests:
+    - http://locolhost:8080/
+
+services:
+- module: passfail
+  criteria:
+  - subject: avg-rt  # required
+    label: 'Average response rate'  # optional, default is ''
+    condition: '>'  # required
+    threshold: 150ms  # required
+    timeframe: 5s  # optional, default is none
+
+reporting:
+- module: junit-xml
+  filename: performance.xml
+  data-source: pass-fail
+
+modules:
+  console:
+    disable: true
+
