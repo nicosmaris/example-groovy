@@ -21,7 +21,12 @@
   <url>http://www.eclemma.org/jacoco</url>
 
     <properties>
-        <displayProps>target/selenium/display.properties</displayProps>
+        <source.property>1.8</source.property>
+        <target.property>1.8</target.property>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <gatling.version>${project.version}</gatling.version>
+        <gatling-plugin.version>2.2.1</gatling-plugin.version>
+        <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
     </properties>
 
   <dependencies>
