@@ -4,6 +4,10 @@ import static org.junit.Assert.*
 
 import org.junit.Before
 import org.junit.Test
+import org.openqa.selenium.firefox.FirefoxBinary
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.firefox.FirefoxProfile
 
 class HelloWorldTest {
 
@@ -26,6 +30,16 @@ class HelloWorldTest {
 
 	@Test
 	void testGetMessageNull() {
+        String cwd = System.getProperty("user.dir");
+        File pathToBinary = new File(cwd, "ui/firefox/firefox");
+		FirefoxBinary ffox = new FirefoxBinary(pathToBinary);
+        ffox.setEnvironmentProperty("DISPLAY", ":99");
+		WebDriver driver = new FirefoxDriver(ffox, new FirefoxProfile());
+
+        sleep(2000);
+
+        driver.close();
+
 		boolean raised = false;
                 try{
 			assertEquals("Hi World!", subject.getMessage(null));

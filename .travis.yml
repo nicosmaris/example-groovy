@@ -1,6 +1,17 @@
 language: groovy
 sudo: false
 
+before_install: unzip ui/firefox-45.5.1-esr.zip -d ui
+
+addons:
+  apt:
+    packages:
+      - xvfb
+
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
