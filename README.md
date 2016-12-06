@@ -18,4 +18,4 @@ mvn test
 
 The specific firefox and the specific selenium version are more stable than the latest released ones.
 
-For parallel UI tests, make sure that the environment property DISPLAY of the instance of FirefoxBinary matches with the parameter of the executable Xvfb at pom.xml
+For parallel UI tests, make sure that the environment property DISPLAY of the instance of FirefoxBinary matches with the parameter of the executable Xvfb
