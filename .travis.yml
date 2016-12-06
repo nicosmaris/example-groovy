@@ -15,8 +15,8 @@ install:
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
 script:
-#  - mvn test
-  - bzt performance.yml
+  - mvn test
+#  - bzt performance.yml
 
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)

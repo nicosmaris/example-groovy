@@ -9,7 +9,7 @@ import org.junit.Test
 
 
 class SearchTest {
-	private driver;
+	private DisplayDriver driver;
 	@Before
 	void setup() {
         driver = new DisplayDriver("99");
@@ -20,7 +20,8 @@ class SearchTest {
     }
 	@Test
 	void testPositive() {
-        sleep(2000);
+		redirected_url = 'https://www.mediawiki.org/wiki/MediaWiki';
+		driver.open(redirected_url);
 	}
 	@Test
 	void testNegative1() {
