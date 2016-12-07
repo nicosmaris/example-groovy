@@ -34,7 +34,7 @@ class PassiveDriver {
         String cwd = System.getProperty("user.dir");
         File pathToBinary = new File(cwd, "ui/firefox/firefox");
         FirefoxBinary ffox = new FirefoxBinary(pathToBinary);
-//        ffox.setEnvironmentProperty("DISPLAY", ":" + display);
+        ffox.setEnvironmentProperty("DISPLAY", ":" + display);
         this.browser_with_debug_level = new FirefoxDriver(ffox, new FirefoxProfile());
         this.browser_with_debug_level.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         this.browser_with_debug_level.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);

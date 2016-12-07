@@ -11,15 +11,6 @@ scenarios:
     additional-classpath:
     - target/example-groovy-1.0-SNAPSHOT.jar
 
-services:
-- module: passfail
-  criteria:
-  - subject: avg-rt  # required
-    label: 'Average response rate'  # optional, default is ''
-    condition: '>'  # required
-    threshold: 150ms  # required
-    timeframe: 5s  # optional, default is none
-
 reporting:
 - module: junit-xml
   filename: performance.xml
