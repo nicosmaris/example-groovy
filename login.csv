@@ -1,0 +1,4 @@
+username;password;xpath
+thisisatest123456;thisisatestqwerty;//a[contains(text(),'Thisisatest123456')]
+thisisatest123456;s;//a[not(contains(text(),'Thisisatest123456'))]
+thisisatest123457;s;//a[not(contains(text(),'Thisisatest123457'))]

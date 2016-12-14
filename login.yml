@@ -1,0 +1,23 @@
+---
+execution:
+- concurrency: 10
+  ramp-up: 1s
+  hold-for: 1s
+  scenario: login
+
+scenarios:
+  login:
+    data-sources:
+    - path: login.csv
+    requests:
+    - url: https://www.mediawiki.org/w/index.php
+      body:
+        wpName: ${username}
+        wpPassword: ${password}
+        authAction: login
+      extract-xpath:
+        extractor1: ${xpath}
+
+modules:
+  console:
+    disable: true

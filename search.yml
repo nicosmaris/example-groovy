@@ -1,0 +1,27 @@
+---
+execution:
+- concurrency: 10
+  ramp-up: 1s
+  hold-for: 1s
+  scenario: search
+
+scenarios:
+  search:
+    data-sources:
+    - path: search.csv
+    requests:
+    - url: https://www.mediawiki.org/w/index.php
+      body:
+        title: Special%3ASearch
+        go: Go
+        search: ${search}
+      extract-regexp:
+        page_title: ${pagetitle}
+      extract-css-jquery:
+        extractor1: .${cssclass}
+
+modules:
+  console:
+    disable: true
+
+# for performance analysis check http://gettaurus.org/docs/ChromeProfiler/
