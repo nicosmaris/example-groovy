@@ -1,4 +1,4 @@
-[![Travis build status](https://travis-ci.org/nicosmaris/example-groovy.png?branch=master)](https://travis-ci.org/nicosmaris/example-groovy) 
+[![Travis build status](https://travis-ci.org/nicosmaris/example-groovy.png?branch=master)](https://travis-ci.org/nicosmaris/groovy) 
 Groovy project with selenium tests. The only supported browser for the moment is Firefox 45.
 
 
