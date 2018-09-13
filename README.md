@@ -2,18 +2,21 @@
 Groovy project with selenium tests. The only supported browser for the moment is Firefox 45.
 
 
-To run it locally, you need first to install:
+First you need to install:
 
+```bash
 ubuntu 16.10
 sudo apt-get install -y xvfb openjdk-8-jdk
 unzip ui/firefox-45.5.1-esr.zip -d ui
+```
 
-To run it locally, you need:
+To run it locally:
 
+```bash
 export DISPLAY=':99.0'
 Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 mvn test
-  
+```  
 
 The specific firefox and the specific selenium version are more stable than the latest released ones.
 
